@@ -1,0 +1,18 @@
+{
+  "name": "ovidioservices",
+  "version": "1.0.0",
+  "description": "pasarela",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antx",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  }
+}
