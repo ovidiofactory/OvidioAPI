@@ -47,8 +47,6 @@ app.post('/practice/v2/payment/gp/token',(req, res) =>{
       axios(configtoken)
       .then(function (response) {
         token = response.data.data.jwt;  //console.log(JSON.stringify(response.data));
-        console.log(response.data.jwt);
-        console.log(response.data.data.jwt);
         var config = {
           method: 'post',
           url: PAYMENT_GP_TOKEN_URL,
