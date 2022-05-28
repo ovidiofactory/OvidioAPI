@@ -51,6 +51,7 @@ app.post('/practice/v2/payment/gp/token', (req, res) => {
     axios(configtoken)
     .then(function (response) {
       token = response.data.data.jwt;
+    
       var config = {
         method: 'post',
         url: PAYMENT_GP_TOKEN_URL,
@@ -73,7 +74,7 @@ app.post('/practice/v2/payment/gp/token', (req, res) => {
             msg: "An unexpected errors has happen"
         });
         res.send(error);
-        //console.log(err);
+        console.log(err);
       });      
     })
     .catch(function (error) {
