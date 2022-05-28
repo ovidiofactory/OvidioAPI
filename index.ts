@@ -69,7 +69,7 @@ app.post('/practice/v2/payment/gp/token',(req, res) =>{
               msg: "An unexpected errors has happen"
           });
           res.send(error);
-          console.log(err);
+          //console.log(err);
         });      
       })
       .catch(function (error) {
