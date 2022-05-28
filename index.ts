@@ -46,7 +46,7 @@ app.post('/practice/v2/payment/gp/token',(req, res) =>{
       var token = "";
       axios(configtoken)
       .then(function (response) {
-        token = response.data.data.jwt;  //console.log(JSON.stringify(response.data));
+        token = response.data.data.jwt;
         var config = {
           method: 'post',
           url: PAYMENT_GP_TOKEN_URL,
@@ -57,11 +57,11 @@ app.post('/practice/v2/payment/gp/token',(req, res) =>{
           },
           data : data
         };
-        console.log(config);
+
         axios(config)
-        .then(function (response) {
-          // console.log(req);
-          res.send(response.data);
+          .then(function (response) {
+            // console.log(req);
+            res.send(response.data);
         })
         .catch(function (err) {
           var error = JSON.stringify({
@@ -69,14 +69,12 @@ app.post('/practice/v2/payment/gp/token',(req, res) =>{
               msg: "An unexpected errors has happen"
           });
           res.send(error);
-          // console.log(err);
-      });      
+          console.log(err);
+        });      
       })
       .catch(function (error) {
         // console.log(error);
-      });      
-      
-      
+      });
 });
  
 const port = process.env.PORT || 8080;
