@@ -23,7 +23,7 @@ app.get('/',(req, res) =>{
 app.post('/practice/v2/payment/gp/token', (req, res) => {
 
     console.log(JSON.stringify(req.body));
-    
+
     var data = JSON.stringify({
           name: req.body.name,
           number: req.body.number,
@@ -31,6 +31,7 @@ app.post('/practice/v2/payment/gp/token', (req, res) => {
           expirationMonth: req.body.expirationMonth,
           expirationYear: req.body.expirationYear,
           nickname: req.body.nickname,
+          e:1
     });
 
     var datatoken = JSON.stringify({
