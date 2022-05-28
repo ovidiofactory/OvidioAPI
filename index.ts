@@ -1,6 +1,7 @@
 const appName = "Node Js Api Ovidio";
 const axios = require('axios');
 const express = require('express');
+const cors = require('cors');    
 const app = express();
 app.use(express.json());
 
@@ -15,6 +16,15 @@ app.use(express.json());
 
 // END-POINT PASARELA
 const PAYMENT_GP_TOKEN_URL = "https://api.huli.io/practice/v2/payment/gp/token";
+
+
+const corsOptions = {
+  //origin: ["localhost:3000","salud-360-server-wmktg.ondigitalocean.app", "app.salud360.cr",  "salud360.cr"],
+  credentials: true,
+  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH', 'OPTIONS','CUSTOM']
+};
+
+app.use(cors(corsOptions));
 
 app.get('/',(req, res) =>{
     res.send(appName);
