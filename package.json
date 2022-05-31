@@ -4,14 +4,15 @@
   "description": "pasarela",
   "main": "index.ts",
   "scripts": {
-    "start": "node ."
+    "start": "pm2-docker ."
   },
   "author": "Antx",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.1",
     "cors": "^2.8.5",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "pm2": "^5.2.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23"
