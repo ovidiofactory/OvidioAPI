@@ -4,7 +4,7 @@
   "description": "pasarela",
   "main": "index.ts",
   "scripts": {
-    "start": "pm2-docker ."
+    "start": "pm2-docker index.ts"
   },
   "author": "Antx",
   "license": "ISC",
